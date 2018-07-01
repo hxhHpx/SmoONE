@@ -20,7 +20,7 @@ partial class frmMain
     /// </summary>
     /// <remarks></remarks>
     Smobiler.Core.MobileServer server;
-
+    readonly string ServerIP = "101.132.109.90";
     private void frmMain_Load(object sender, EventArgs e)
     {
         try
@@ -28,13 +28,16 @@ partial class frmMain
             InitialNetworkInterfaces();
             //定义Smobiler服务
             server = new Smobiler.Core.MobileServer();
+            
             //设置默认网卡
             if (networkDict.Count > 0)
             {
+                networkDict.Add("远程服务器连接", ServerIP);
                 string[] combvalues = new string[networkDict.Count];
                 networkDict.Keys.CopyTo(combvalues, 0);
                 this.combNets.Items.AddRange(combvalues);
                 this.combNets.SelectedIndex = 0;
+                
             }
             //启动Smobiler服务
             StartServer();

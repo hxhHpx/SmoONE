@@ -490,7 +490,16 @@ namespace SmoONE.Application
         /// <returns>true表示存在，false表示不存在</returns>
         public bool IsExists(string UserID)
         {
-            return _userRepository.IsExists(UserID);
+            try
+            {
+                return _userRepository.IsExists(UserID);
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+           
         }
 
         /// <summary>
@@ -500,7 +509,16 @@ namespace SmoONE.Application
         /// <returns>true表示存在，false表示不存在</returns>
         public bool IsMalicious(string DeviceID)
         {
-            return _validateCodeRepository.IsMalicious(DeviceID);
+            try
+            {
+                return _validateCodeRepository.IsMalicious(DeviceID);
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            
         }
 
         /// <summary>

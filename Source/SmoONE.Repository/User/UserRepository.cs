@@ -49,6 +49,7 @@ namespace SmoONE.Repository
         /// <returns>true表示存在，false表示不存在</returns>
         public bool IsExists(string UserID)
         {
+          
             return _entities.Any(x => x.U_ID == UserID);
         }
 
