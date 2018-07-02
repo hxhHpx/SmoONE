@@ -43,6 +43,7 @@ namespace SmoONE.UI
             this.chkRememberPwd = new Smobiler.Core.Controls.CheckBox();
             this.label4 = new Smobiler.Core.Controls.Label();
             this.btnGestures = new Smobiler.Core.Controls.Button();
+            this.im1 = new Smobiler.Plugins.RongIM.IM();
             // 
             // panel1
             // 
@@ -202,9 +203,15 @@ namespace SmoONE.UI
             this.btnGestures.Text = "ÊÖÊÆµÇÂ¼";
             this.btnGestures.Press += new System.EventHandler(this.button1_Press);
             // 
+            // im1
+            // 
+            this.im1.Name = "im1";
+            // 
             // frmLogon
             // 
             this.BackColor = System.Drawing.Color.White;
+            this.Components.AddRange(new Smobiler.Core.Controls.MobileComponent[] {
+            this.im1});
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.panel1});
             this.EnableMirrorPattern = false;
@@ -232,5 +239,6 @@ namespace SmoONE.UI
         private Smobiler.Core.Controls.CheckBox chkRememberPwd;
         private Smobiler.Core.Controls.Label label4;
         private Smobiler.Core.Controls.Button btnGestures;
+        private Smobiler.Plugins.RongIM.IM im1;
     }
 }

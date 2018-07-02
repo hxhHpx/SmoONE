@@ -1047,7 +1047,7 @@
       <Name>SmoONE.CommLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\SmoONE.Domain\SmoONE.Domain.csproj">
-      <Project>{7fad9bb7-8154-402c-9826-95cdf53bb770}</Project>
+      <Project>{46cfec3a-cece-4cf3-9a9d-75dafb5168eb}</Project>
       <Name>SmoONE.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\SmoONE.DTOs\SmoONE.DTOs.csproj">

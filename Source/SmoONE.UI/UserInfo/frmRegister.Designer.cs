@@ -30,6 +30,8 @@ namespace SmoONE.UI.UserInfo
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
+            Smobiler.Core.Controls.RadioButton radioButton1 = new Smobiler.Core.Controls.RadioButton();
+            Smobiler.Core.Controls.RadioButton radioButton2 = new Smobiler.Core.Controls.RadioButton();
             this.plName = new Smobiler.Core.Controls.Panel();
             this.label1 = new Smobiler.Core.Controls.Label();
             this.txtName = new Smobiler.Core.Controls.TextBox();
@@ -46,8 +48,8 @@ namespace SmoONE.UI.UserInfo
             this.label4 = new Smobiler.Core.Controls.Label();
             this.btnSave = new Smobiler.Core.Controls.Button();
             this.radioGroup1 = new Smobiler.Core.Controls.RadioGroup();
-            this.menuTitle1 = new SmoONE.UI.Layout.MenuTitle();
             this.spContent = new Smobiler.Core.Controls.Panel();
+            this.menuTitle1 = new SmoONE.UI.Layout.MenuTitle();
             // 
             // plName
             // 
@@ -206,6 +208,16 @@ namespace SmoONE.UI.UserInfo
             // radioGroup1
             // 
             this.radioGroup1.BackColor = System.Drawing.Color.White;
+            radioButton1.Checked = true;
+            radioButton1.ID = "0";
+            radioButton1.Text = "管理员";
+            radioButton1.Value = "Administrator";
+            radioButton2.ID = "1";
+            radioButton2.Text = "员工";
+            radioButton2.Value = "employee";
+            this.radioGroup1.Buttons.AddRange(new Smobiler.Core.Controls.RadioButton[] {
+            radioButton1,
+            radioButton2});
             this.radioGroup1.FontSize = 12F;
             this.radioGroup1.GridLines = true;
             this.radioGroup1.GridLinesColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
@@ -213,14 +225,6 @@ namespace SmoONE.UI.UserInfo
             this.radioGroup1.Name = "radioGroup1";
             this.radioGroup1.Padding = new Smobiler.Core.Controls.Padding(4F, 0F, 0F, 0F);
             this.radioGroup1.Size = new System.Drawing.Size(300, 100);
-            // 
-            // menuTitle1
-            // 
-            this.menuTitle1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.menuTitle1.Location = new System.Drawing.Point(53, 68);
-            this.menuTitle1.Name = "menuTitle1";
-            this.menuTitle1.Size = new System.Drawing.Size(100, 50);
-            this.menuTitle1.TitleText = "设置登录信息";
             // 
             // spContent
             // 
@@ -240,6 +244,14 @@ namespace SmoONE.UI.UserInfo
             this.spContent.Name = "spContent";
             this.spContent.Scrollable = true;
             this.spContent.Size = new System.Drawing.Size(100, 30);
+            // 
+            // menuTitle1
+            // 
+            this.menuTitle1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.menuTitle1.Location = new System.Drawing.Point(53, 68);
+            this.menuTitle1.Name = "menuTitle1";
+            this.menuTitle1.Size = new System.Drawing.Size(100, 50);
+            this.menuTitle1.TitleText = "设置登录信息";
             // 
             // frmRegister
             // 
